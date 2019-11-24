@@ -4,6 +4,8 @@ import android.content.Context
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.ImageView
+import android.widget.TextView
 
 class ListViewAdapter(val context: Context, val listWorldLeaders: ArrayList<WorldLeaders>):BaseAdapter() {
     override fun getView(index: Int, view: View?, viewGroup: ViewGroup?): View {
@@ -20,5 +22,11 @@ class ListViewAdapter(val context: Context, val listWorldLeaders: ArrayList<Worl
 
     override fun getCount(): Int {
         return listWorldLeaders.size
+    }
+
+    private inner class ViewHolder(view: View) {
+        private val tvLeadersName: TextView = view.findViewById(R.id.tvTitle)
+        private val tvLeadersDesciption: TextView = view.findViewById(R.id.tvDescription)
+        private val ivLeadersPhoto: ImageView = view.findViewById(R.id.ivImage)
     }
 }
