@@ -28,5 +28,10 @@ class ListViewAdapter(val context: Context, val listWorldLeaders: ArrayList<Worl
         private val tvLeadersName: TextView = view.findViewById(R.id.tvTitle)
         private val tvLeadersDesciption: TextView = view.findViewById(R.id.tvDescription)
         private val ivLeadersPhoto: ImageView = view.findViewById(R.id.ivImage)
+
+        fun bind(context: Context, hero: WorldLeaders) {
+            tvLeadersName.text = hero.name
+            tvLeadersDesciption.text = hero.desc
+        }
     }
 }
