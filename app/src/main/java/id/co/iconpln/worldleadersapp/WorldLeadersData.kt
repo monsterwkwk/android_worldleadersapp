@@ -5,6 +5,14 @@ object WorldLeadersData {
         get() {
             // create empty List
             val list = ArrayList<WorldLeaders>()
+            // add WorldLeaders element in List Hero
+            for(data in dataWorldLeaders) {
+                val leaders = WorldLeaders()
+                leaders.name = data[0]
+                leaders.desc = data[1]
+                leaders.photo = data[2]
+                list.add(leaders)
+            }
             return list
         }
 
