@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ListView
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     private fun setListItemClickListener(listView: ListView) {
         listView.onItemClickListener = object : AdapterView.OnItemClickListener {
             override fun onItemClick(adapterView: AdapterView<*>?, view: View?, i: Int, l: Long) {
-
+                Toast.makeText(this@MainActivity, "Show toast event", Toast.LENGTH_LONG).show()
             }
         }
     }
