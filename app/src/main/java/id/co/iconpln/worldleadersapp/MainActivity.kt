@@ -1,6 +1,7 @@
 package id.co.iconpln.worldleadersapp
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -22,10 +23,19 @@ class MainActivity : AppCompatActivity() {
 
     private fun setListItemClickListener(listView: ListView) {
         listView.onItemClickListener = object : AdapterView.OnItemClickListener {
-            override fun onItemClick(adapterView: AdapterView<*>?, view: View?, i: Int, l: Long) {
-                Toast.makeText(this@MainActivity, "Show toast event", Toast.LENGTH_LONG).show()
+            override fun onItemClick(adapterView: AdapterView<*>?, view: View?, index: Int, l: Long) {
+                showDetailLeader(list[index])
             }
         }
+    }
+
+    private  fun showDetailLeader(leaders: WorldLeaders) {
+        val detailLeadersIntent = Intent(this, DetailLeadersActivity::class.java)
+        // sending data
+        detailLeadersIntent.putExtra(DetailLeadersActivity.EXTRA_NAME, leaders.name)
+        detailLeadersIntent.putExtra(DetailLeadersActivity.EXTRA_DESC, leaders.desc)
+        detailLeadersIntent.putExtra(DetailLeadersActivity.EXTRA_IMAGE_URL, leaders.photo)
+        startActivity(detailLeadersIntent)
     }
 
     fun loadListBaseAdapter(context: Context) {
