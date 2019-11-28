@@ -2,6 +2,7 @@ package id.co.iconpln.worldleadersapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import kotlinx.android.synthetic.main.activity_detail_leaders.*
@@ -25,6 +26,18 @@ class DetailLeadersActivity : AppCompatActivity() {
     private fun setupActionbar() {
         supportActionBar?.title = "Detail World Leaders"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId) {
+            android.R.id.home -> {
+                finish()
+                true
+            }
+            else -> {
+                false
+            }
+        }
     }
 
     private fun displayLeaderDetail() {
