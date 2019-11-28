@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">WorldLeadersApp</string>
+    <string name="leader_name">Title</string>
+    <string name="leader_desc">This is a list of current heads of state and heads of government. In some cases, mainly in presidential systems, there is only one leader being both head of state and head of government. In other cases, mainly in semi-presidential and parliamentary systems, the head of state and the head of government are different people. In semi-presidential and parliamentary systems, the head of government role (i.e. executive branch) is fulfilled by both the listed head of government and the head of state.</string>
+    <string name="leader_btn">More..</string>
 </resources>

@@ -20,13 +20,13 @@
         android:textStyle="bold"
         android:maxLines="1"
         android:layout_margin="8dp"
-        android:text="Title" />
+        android:text="@string/leader_name" />
 
     <TextView
         android:id="@+id/tvDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="This is a list of current heads of state and heads of government. In some cases, mainly in presidential systems, there is only one leader being both head of state and head of government. In other cases, mainly in semi-presidential and parliamentary systems, the head of state and the head of government are different people. In semi-presidential and parliamentary systems, the head of government role (i.e. executive branch) is fulfilled by both the listed head of government and the head of state."
+        android:text="@string/leader_desc"
         android:layout_toEndOf="@+id/ivImage"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
@@ -41,7 +41,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
-        android:text="More.."
+        android:text="@string/leader_btn"
         android:layout_toEndOf="@+id/ivImage"
         android:layout_below="@+id/tvDescription"
         android:background="@color/base_color"/>
