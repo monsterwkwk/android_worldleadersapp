@@ -19,6 +19,12 @@ class DetailLeadersActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail_leaders)
 
         displayLeaderDetail()
+        setupActionbar()
+    }
+
+    private fun setupActionbar() {
+        supportActionBar?.title = "Detail World Leaders"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     private fun displayLeaderDetail() {
