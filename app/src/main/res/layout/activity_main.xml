@@ -4,12 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="8dp"
     tools:context=".MainActivity">
 
     <ListView
         android:id="@+id/lvListLeader"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:dividerHeight="5dp"/>
+        android:dividerHeight="5dp"
+        android:layout_margin="5dp"/>
 
 </LinearLayout>

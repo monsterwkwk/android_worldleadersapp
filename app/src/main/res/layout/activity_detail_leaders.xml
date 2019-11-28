@@ -12,28 +12,32 @@
         android:padding="4dp"
         tools:context=".DetailLeadersActivity">
 
+        <ImageView
+            android:id="@+id/ivPictDetail"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerInside"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_launcher_foreground" />
+
         <TextView
             android:id="@+id/tvTitleDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:gravity="center"
-            android:text="@string/leader_name" />
-
-        <ImageView
-            android:id="@+id/ivPictDetail"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_launcher_foreground"
-            android:layout_below="@+id/tvTitleDetail" />
+            android:textColor="@color/base_color"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:text="@string/leader_name"
+            android:layout_below="@+id/ivPictDetail"/>
 
         <TextView
             android:id="@+id/tvDescDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:layout_below="@+id/ivPictDetail"
+            android:layout_below="@+id/tvTitleDetail"
             android:text="@string/leader_desc" />
 
     </RelativeLayout>
